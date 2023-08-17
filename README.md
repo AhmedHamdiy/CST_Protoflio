@@ -5,4 +5,4 @@ This GitHub repository serves as my personal portfolio, showcasing my skills, pr
 ##This design using Figma: 
 
 
-![FigmaDesign](https://github.com/AhmedHamdiy/CST_Protofolio/assets/111378492/ed069301-fd82-43f3-9c84-cf07a434e76d)
+![Group 21](https://github.com/AhmedHamdiy/CST_Protofolio/assets/111378492/6402c79f-e950-42cd-8de7-e04624d23415)
