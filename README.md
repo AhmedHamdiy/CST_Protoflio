@@ -1,6 +1,9 @@
 # CST_Protofolio
-This GitHub repository serves as my personal portfolio, showcasing my skills, projects, and achievements as a software developer. It provides a comprehensive overview of my professional background and highlights the projects I've worked on.
+🌟 Introducing our impressive portfolio project! 🎉
 
+We've been hard at work, honing our skills in front-end tools and UI/UX design using Figma. And now, we're thrilled to showcase the results!
+
+📚 Dive into our repository to witness the culmination of our knowledge and expertise. This project is not just a task from CST; it's a testament to our dedication and passion for creating stunning digital experiences.
 
 ## The design using Figma: 
 
