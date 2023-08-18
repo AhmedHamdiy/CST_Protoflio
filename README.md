@@ -1,4 +1,4 @@
-# CST_Protofolio
+# CST_Portofolio
 🌟 Introducing our impressive portfolio project! 🎉
 
 We've been hard at work, honing our skills in front-end tools and UI/UX design using Figma. And now, we're thrilled to showcase the results!
