@@ -13,5 +13,5 @@ This GitHub repository serves as my personal portfolio, showcasing my skills, pr
 
 
 ## Our Team:
-- [Ahmed Hamdy]([https://github.com/akramhany](https://github.com/AhmedHamdiy))
-- [AbdelRahman Samy]([https://github.com/AhmedHamed3699](https://github.com/AbdelruhmanSamy)https://github.com/AbdelruhmanSamy)
+- [Ahmed Hamdy](https://github.com/AhmedHamdiy)
+- [AbdelRahman Samy](https://github.com/AbdelruhmanSamy)
