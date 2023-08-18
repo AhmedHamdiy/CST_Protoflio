@@ -10,6 +10,8 @@ We've been hard at work, honing our skills in front-end tools and UI/UX design u
 ### Dark Mode
 ![Home One page- Dark](https://github.com/AhmedHamdiy/CST_Protofolio/assets/111378492/8a9dc2ff-9519-43a2-bf21-58064b5c3785)
 
+<hr>
+
 ### Light Mode
 
 ![Home One page- Light](https://github.com/AhmedHamdiy/CST_Protofolio/assets/111378492/11ab5e70-ca82-48e2-a0c8-244306f549b1)
