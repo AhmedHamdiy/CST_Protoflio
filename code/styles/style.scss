@@ -1,0 +1,78 @@
+$blueColor: #00ADB5;
+$darkcolor: #222831;
+
+body{
+    padding: 0;
+    top:0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+main{
+    width: 44.44%;
+}
+aside{
+    width:21.18%;
+}
+nav{
+    position: sticky;
+    right: -20px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7.5%;
+    height: 750px;
+    background: $darkcolor;
+    box-shadow: 4px 0px 10px 0px hsl(210, 29%, 16%);
+
+
+.icons-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 70px;
+    .dark-light-logo{
+        margin-top: 65px;
+        margin-bottom: 60px;
+    }
+    .navbar-icon
+    {
+        position: relative;
+    }
+    .navbar-icon::after{
+        position: absolute;
+        border-radius: 50%;
+        top: -11.45px;
+        left: -11.6px;
+        content: "";
+        width:40px;
+        height:40px;
+        background-color: #00acb5;
+        opacity: 0.2;
+    }
+}
+}
+
+footer{
+    display: grid;
+    grid-template-columns:50% 40%;
+    column-gap: 10%;
+    grid-template-rows: 100% 10%;
+    
+.feedback{
+    background-color: #222831;   
+
+
+}
+
+.contact{
+ background-color: #222831;   
+}
+}
