@@ -8,12 +8,12 @@ We've been hard at work, honing our skills in front-end tools and UI/UX design u
 ## The design using Figma: 
 
 ### Dark Mode
-![Home One page- Dark](https://github.com/AhmedHamdiy/CST_Portofolio/assets/111378492/d879985e-3091-424e-9d3c-98bf904ebbdf)
+![Home One page- Dark](https://github.com/AhmedHamdiy/CST_Portofolio/assets/111378492/d3742938-41ce-4bdb-8959-746b84249653)
 
 <hr>
 
 ### Light Mode
-![Home One page- Light](https://github.com/AhmedHamdiy/CST_Portofolio/assets/111378492/e0be7eed-9191-4616-8d0a-3a2f64c4a2fc)
+![Home One page- Light](https://github.com/AhmedHamdiy/CST_Portofolio/assets/111378492/b9529dbb-6015-432b-86a9-19fc50b62cf2)
 
 
 
