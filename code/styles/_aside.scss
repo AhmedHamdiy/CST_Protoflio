@@ -1,0 +1,35 @@
+aside{
+    position: sticky;
+    right: -20px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:20%;
+    height: 770px;
+    background-color: var(--section-background);
+    li{
+        color: var(--paragraph-color);
+    }
+    button{
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--mainBlueColor);
+        color: var(--section-background);
+        font-weight: bold;
+        margin: 10px;
+        path{
+            fill: var(--section-background);
+        }
+        &:hover{
+            cursor: pointer;
+            background-color: var(--section-background);
+            color: var(--mainBlueColor);
+            path{
+                fill: var(--mainBlueColor);
+            }
+        }
+}
+}

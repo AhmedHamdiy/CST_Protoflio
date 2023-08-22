@@ -1,78 +1,52 @@
-$blueColor: #00ADB5;
-$darkcolor: #222831;
+@import './nav';
+@import './main';
+@import './footer';
+@import './aside';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Inter:wght@200&display=swap');
 
-body{
+:root,
+.dark-mode {
+    --navShadowColor: rgba(47, 122, 249, 0.10);
+    --mainBlueColor: #00ADB5;
+
+    --form-background: rgba(240, 240, 246, 0.8);
+    --section-background: #222831;
+    --body-background:#222831f2;
+    --paragraph-color:rgba(238, 238, 238, 0.75);
+    --heading-color:#FFF;
+}
+body {
     padding: 0;
     top:0;
     margin: 0;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: fit-content;
+    width: 100%;
+    background-color: var(--body-background);
 }
 
-main{
-    width: 44.44%;
-}
-aside{
-    width:21.18%;
-}
-nav{
-    position: sticky;
-    right: -20px;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 7.5%;
-    height: 750px;
-    background: $darkcolor;
-    box-shadow: 4px 0px 10px 0px hsl(210, 29%, 16%);
-
-
-.icons-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 70px;
-    .dark-light-logo{
-        margin-top: 65px;
-        margin-bottom: 60px;
-    }
-    .navbar-icon
-    {
-        position: relative;
-    }
-    .navbar-icon::after{
-        position: absolute;
-        border-radius: 50%;
-        top: -11.45px;
-        left: -11.6px;
-        content: "";
-        width:40px;
-        height:40px;
-        background-color: #00acb5;
-        opacity: 0.2;
-    }
-}
+ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
 }
 
-footer{
-    display: grid;
-    grid-template-columns:50% 40%;
-    column-gap: 10%;
-    grid-template-rows: 100% 10%;
-    
-.feedback{
-    background-color: #222831;   
+/*
+:root {
+    --navShadowColor: rgba(47, 122, 249, 0.10);
+    --mainBlueColor: #00ADB5;
 
-
+    --form-background: #F0F0F6;
+    --navIconColor: #FFF;
+    --section-background: #FFF;
+    --body-background:#F0F0F6;
+    --paragraph-color:#767676;
+    --heading-color:#000;
 }
-
-.contact{
- background-color: #222831;   
-}
-}
+*/
