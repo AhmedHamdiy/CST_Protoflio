@@ -1,17 +1,200 @@
-aside{
+$asside-width: 305px;
+$asside-height: 1009px;
+
+@mixin skillItem {
+    color: var(--form-background);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+@mixin textStyles {
+    color: var(--heading-color);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+@mixin flexColoumn {
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    justify-content: space-evenly;
+}
+
+aside {
     position: sticky;
     right: -20px;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:20%;
-    height: 770px;
+    width: $asside-width;
+    height: $asside-height;
     background-color: var(--section-background);
-    li{
+    flex-shrink: 0;
+
+    .asside-image {
+        max-width: $asside-width;
+        max-width: $asside-height;
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        border: 2px solid var(--mainBlueColor);
+        background: lightgray no-repeat;
+        margin: 2px;
+    }
+
+    .personal-name {
+        @include textStyles();
+        margin: 0rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .job-info {
+        //backround styles
+        width: 152px;
+        height: 31px;
+        border-radius: 50px;
+        background: rgba(0, 173, 181, 0.30);
+        margin-top: 0;
+        margin-bottom: 10px;
+        //text styles
+        color: var(--mainBlueColor);
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 31px;
+        text-transform: capitalize;
+        vertical-align: auto;
+    }
+
+    .social-pages {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .social-image {
+        width: 14px;
+        height: 14px;
+        fill: var(--heading-color);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .page {
+        width: 24px;
+        height: 24px;
+        border-radius: 10px;
+        background-color: var(--mainBlueColor);
+
+    }
+
+    .separating-line {
+        width: 220px;
+        height: 1.5px;
+        background: var(--heading-color);
+    }
+
+    .asside-title {
+        text-align: left;
+        @include textStyles();
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+
+    }
+
+    .skills-info {}
+
+    .skills {
+        @include flexColoumn();
+    }
+
+    .skill-info-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skill-name-item {
+        //defined up
+        @include skillItem();
+    }
+
+    .skill-percentage-item {
+        //defined up
+        @include skillItem();
+    }
+
+    .skill-bar {
+        width: 220px;
+        height: 4px;
+        margin-bottom: 1rem;
+        border: var(--mainBlueColor) solid;
+        border-width: 1px;
+        border-radius: 10px;
+    }
+
+    .Cpp {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 90%;
+    }
+
+    .html {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 85%;
+    }
+
+    .css {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 80%;
+    }
+
+    .python {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 75%;
+    }
+
+    .js {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 85%;
+    }
+
+    .extra-skills {
+        @include flexColoumn();
+    }
+
+    .extra-skill-name {
+        margin: 0;
+        margin-left: 2rem;
+    }
+
+    .extra-skill-item {
+        margin: 2.5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: first baseline;
+    }
+
+    .cv-download {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    li {
         color: var(--paragraph-color);
     }
-    button{
+
+    button {
         width: 100%;
         height: 40px;
         border: none;
@@ -20,16 +203,19 @@ aside{
         color: var(--section-background);
         font-weight: bold;
         margin: 10px;
-        path{
+
+        path {
             fill: var(--section-background);
         }
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             background-color: var(--section-background);
             color: var(--mainBlueColor);
-            path{
+
+            path {
                 fill: var(--mainBlueColor);
             }
         }
-}
+    }
 }

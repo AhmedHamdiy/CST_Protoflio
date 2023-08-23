@@ -351,9 +351,156 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
-  height: 770px;
+  width: 305px;
+  height: 1009px;
   background-color: var(--section-background);
+  flex-shrink: 0;
+}
+aside .asside-image {
+  max-width: 305px;
+  max-width: 1009px;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  border: 2px solid var(--mainBlueColor);
+  background: lightgray no-repeat;
+  margin: 2px;
+}
+aside .personal-name {
+  color: var(--heading-color);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0rem;
+  margin-bottom: 0.5rem;
+}
+aside .job-info {
+  width: 152px;
+  height: 31px;
+  border-radius: 50px;
+  background: rgba(0, 173, 181, 0.3);
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--mainBlueColor);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 31px;
+  text-transform: capitalize;
+  vertical-align: auto;
+}
+aside .social-pages {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+aside .social-image {
+  width: 14px;
+  height: 14px;
+  fill: var(--heading-color);
+  justify-items: center;
+  align-items: center;
+}
+aside .page {
+  width: 24px;
+  height: 24px;
+  border-radius: 10px;
+  background-color: var(--mainBlueColor);
+}
+aside .separating-line {
+  width: 220px;
+  height: 1.5px;
+  background: var(--heading-color);
+}
+aside .asside-title {
+  text-align: left;
+  color: var(--heading-color);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+aside .skills {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  justify-content: space-evenly;
+}
+aside .skill-info-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+aside .skill-name-item {
+  color: var(--form-background);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+aside .skill-percentage-item {
+  color: var(--form-background);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+aside .skill-bar {
+  width: 220px;
+  height: 4px;
+  margin-bottom: 1rem;
+  border: var(--mainBlueColor) solid;
+  border-width: 1px;
+  border-radius: 10px;
+}
+aside .Cpp {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 90%;
+}
+aside .html {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 85%;
+}
+aside .css {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 80%;
+}
+aside .python {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 75%;
+}
+aside .js {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 85%;
+}
+aside .extra-skills {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  justify-content: space-evenly;
+}
+aside .extra-skill-name {
+  margin: 0;
+  margin-left: 2rem;
+}
+aside .extra-skill-item {
+  margin: 2.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: first baseline;
+}
+aside .cv-download {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 aside li {
   color: var(--paragraph-color);
