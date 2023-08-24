@@ -1,85 +1,112 @@
-main{
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin flexColoumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin textStyle ($size) {
+    color: var(--heading-color);
+    font-size: $size;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+main {
     width: 68%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     row-gap: 100px;
-    color:var(--heading-color);
-    section{ 
+    color: var(--heading-color);
+
+    section {
         width: 100%;
         text-align: center;
     }
-    
-    #home{
-        height: 20%;   
+
+    #home {
+        height: 20%;
         display: flex;
         flex-direction: row;
         width: 100%;
         position: relative;
 
-        &:hover,img:hover,svg:hover,.home-text:hover {
-            .text{
+        &:hover,
+        img:hover,
+        svg:hover,
+        .home-text:hover {
+            .text {
                 translate: 40%;
             }
-            img{
+
+            img {
                 translate: -130%;
             }
-            svg{
+
+            svg {
                 transform: scaleX(-1);
             }
         }
-        p{
+
+        p {
             padding-left: 30px;
             width: 48%;
         }
-        .home-text{
+
+        .home-text {
             height: 50vh;
-        background-color: var(--section-background);
-        width: 100%;
-        
-        #soft-ware-word{
-            color: var(--mainBlueColor);
+            background-color: var(--section-background);
+            width: 100%;
+
+            #soft-ware-word {
+                color: var(--mainBlueColor);
+            }
         }
-        }
-        .home-image{
+
+        .home-image {
             margin-top: 20px;
-            img{
+
+            img {
                 width: 45%;
                 height: 100%;
                 position: absolute;
                 right: 0px;
-                bottom:0px;
+                bottom: 0px;
                 z-index: 2;
                 transition: all 0.5s;
+
                 &:hover {
                     translate: (-100%);
                 }
             }
-            svg{
+
+            svg {
                 z-index: 0;
                 width: 100%;
                 position: absolute;
                 right: -0px;
-                bottom:-11px;
+                bottom: -11px;
                 opacity: 70%;
             }
-            
-        }
-        
+
         }
 
-    #my-services{
-        .services-container{
-        padding-left: 10%;
+    }
+
+    #my-services {
+        .services-container {
+            padding-left: 10%;
             width: 80%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            
+            @include flexRow();
 
-            div{
-            transition: all 0.5s;
+            div {
+                transition: all 0.5s;
                 display: flex;
                 flex-direction: column;
                 row-gap: 20px;
@@ -89,53 +116,220 @@ main{
                 width: 30%;
                 height: 200px;
                 border-radius: 20px;
-                
-                
-                svg{
+                opacity: 80%;
+
+
+                svg {
                     width: 100%;
-                    path{
+
+                    path {
                         fill: var(--mainBlueColor);
                     }
                 }
-                img{
+
+                img {
                     width: 70px;
                     height: 70px;
                     flex-shrink: 0;
                 }
-                span{
+
+                span {
                     color: var(--paragraph-color);
                     width: 100%;
                     padding-left: 0;
                 }
-                &:hover{
-                    scale: 1.2;
-                    opacity: 60%;
-                }    
+
+                &:hover {
+                    scale: 1.1;
+                    opacity: 100%;
+                }
             }
         }
     }
 
-    
+    #my-reviews {
+        @include flexColoumn();
+
+        .my-reviews-paragraph {}
+
+        .review-container {
+            width: 100%;
+            @include flexRow();
+        }
+
+        .recommend {
+            width: 300px;
+            height: 400px;
+            border-radius: 30px;
+            background-color: var(--section-background);
+            padding-left: 20px;
+            @include flexColoumn();
+            opacity: 80%;
+            transition: all 0.5s;
+
+            &:hover {
+                scale: 1.1;
+                opacity: 100%;
+            }
+
+        }
+
+        .rating {
+            width: 130px;
+            height: 17.368px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 20px;
+            margin-left: 2rem;
+
+        }
+
+        .review-title {
+            width: 119px;
+            height: 22px;
+            @include textStyle(18px);
+            justify-content: left;
+            margin-left: 2rem;
+            margin-top: rem;
+            padding-top: 10px;
+
+        }
+
+        .review-body {
+            width: 262px;
+            margin-left: 2rem;
+            margin-top: rem;
+            @include textStyle(15px);
+            text-align: left;
+            padding-top: 20px;
+
+        }
+
+
+        .reviewer-info {
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+            padding-left: 20px;
+
+        }
+
+        .reviewer-details {
+            @include flexColoumn();
+            padding-left: 10px;
+            margin: 0;
+            padding-top: 0;
+        }
+
+        .reviewer-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            background: lightgray no-repeat;
+        }
+
+        .reviewer-name {
+            @include textStyle(18px);
+            padding-left: 5px;
+            margin: 0;
+        }
+
+        .reviewer-job {
+            @include textStyle(15px);
+            color: #EEEEEEBF;
+        }
+
+    }
+
+    #my-projects {
+        @include flexColoumn();
+        margin-left: auto;
+        margin-right: auto;
+
+        .my-projects-paragraph {
+            padding-top: 20px;
+        }
+
+        .category-container {
+            @include flexRow();
+            justify-content: space-between;
+            margin-left: 25%;
+            margin-right: 25%;
+
+        }
+
+        .category-button {
+            background-color: transparent;
+            @include textStyle(18px);
+            color: var(--heading-color);
+            border: none;
+        }
+
+        .projects-container {
+            @include flexRow();
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+
+        .project {
+            width: 310px;
+            height: 300px;
+            background-color: aliceblue;
+            margin-left: 25px;
+            margin-top: 25px;
+            border-radius: 30px;
+        }
+
+        .process-scheduler {
+            background-image: url(../../images/process.png);
+        }
+
+        .paint-for-kids {
+            background-image: url(../../images/paint.png);
+        }
+
+        .tic-tac-toe {
+            background-image: url(../../images/tic.png);
+        }
+
+        .todo-app {
+            background-image: url(../../images/to-do.png);
+        }
+
+        .alu {
+            background-image: url(../../images/alu.png);
+        }
+
+        .spi {
+            background-image: url(../../images/spi.png);
+        }
+
+        .hide {
+            display: none;
+        }
+    }
+
     h1 {
         width: 52%;
         color: var(--heading-color);
         font-size: 48px;
         font-weight: bolder;
-        line-height: 60%; 
+        line-height: 60%;
         padding-left: 30px;
     }
-    
+
     h2 {
         color: var(--heading-color);
         font-size: 36px;
     }
-        
-    p{
+
+    p {
         padding-left: 29%;
         width: 42%;
         height: 88px;
         flex-shrink: 0;
-        color:  var(--paragraph-color);
+        color: var(--paragraph-color);
         font-feature-settings: 'calt' off;
         font-family: cairo;
         font-size: 16px;
