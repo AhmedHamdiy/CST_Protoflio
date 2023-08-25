@@ -158,8 +158,8 @@ main {
         }
 
         .recommend {
-            width: 300px;
-            height: 400px;
+            width: 30%;
+            height: fit-content;
             border-radius: 30px;
             background-color: var(--section-background);
             padding-left: 20px;
@@ -175,7 +175,7 @@ main {
         }
 
         .rating {
-            width: 130px;
+            width: 40%;
             height: 17.368px;
             display: flex;
             flex-direction: row;
@@ -186,18 +186,18 @@ main {
         }
 
         .review-title {
-            width: 119px;
+            width: 80%;
             height: 22px;
             @include textStyle(18px);
-            justify-content: left;
-            margin-left: 2rem;
+            text-align: left;
             margin-top: rem;
+            padding-left: 2rem;
             padding-top: 10px;
 
         }
 
         .review-body {
-            width: 262px;
+            width: 85%;
             margin-left: 2rem;
             margin-top: rem;
             @include textStyle(15px);
@@ -212,7 +212,7 @@ main {
             flex-direction: row;
             padding-top: 20px;
             padding-left: 20px;
-
+            padding-bottom: 20px;
         }
 
         .reviewer-details {

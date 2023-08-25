@@ -34,6 +34,6 @@ function handleHardwareButton() {
   });
 }
 
-allButton?.addEventListener("click", addAllProjects());
-softwareButton?.addEventListener("click", handleSoftwareButton());
-hardwareButton?.addEventListener("click", handleHardwareButton());
+allButton.addEventListener("click", addAllProjects());
+softwareButton.addEventListener("click", handleSoftwareButton());
+hardwareButton.addEventListener("click", handleHardwareButton());

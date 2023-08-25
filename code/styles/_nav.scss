@@ -1,4 +1,4 @@
-nav{
+nav {
     position: sticky;
     right: -20px;
     top: 0;
@@ -11,110 +11,118 @@ nav{
     box-shadow: 4px 0px 10px 0px var(--navShadowColor);
 
 
-.icons-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 70px;
+    .icons-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 70px;
 
-    .dark-light-logo{
-        margin-top: 65px;
-        margin-bottom: 20px;
-        path{
-            fill: var(--heading-color);
+        .dark-light-logo {
+            margin-top: 65px;
+            margin-bottom: 20px;
+
+            path {
+                fill: var(--heading-color);
+            }
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.2;
+            }
         }
-        &:hover{
-            cursor: pointer;
-            scale: 1.2;
+
+        .navbar-icon {
+            position: relative;
+
+            path {
+                fill: var(--heading-color);
+            }
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.2;
+
+                path {
+                    fill: var(--mainBlueColor);
+                }
+
+                &::before {
+                    opacity: 100%;
+                }
+
+                &::after {
+                    background-color: var(--heading-color);
+                }
+            }
+
+            &::after {
+                position: absolute;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -60%);
+                content: "";
+                width: 40px;
+                height: 40px;
+                background-color: var(--mainBlueColor);
+                opacity: 0.2;
+            }
+
+            &::before {
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                text-align: center;
+                background-color: black;
+                position: absolute;
+                width: fit-content;
+                padding: 5px;
+                height: 18px;
+                top: -42px;
+                opacity: 0;
+                border-radius: 5px;
+            }
+
         }
+
+        // @media (max-width: 960px) {}
+
     }
-    .navbar-icon
-    {
-        position: relative;
-        path{
-            fill: var(--heading-color);
-        }
-        &:hover{
-            cursor: pointer;
-            scale: 1.2;
-            path{
-                fill: var(--mainBlueColor);
-            }
-            &::before{
-                opacity: 100%;
-            }
-            &::after{
-                background-color: var(--heading-color);
-            }
-        }
-        &::after{
-            position: absolute;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -60%);
-            content: "";
-            width:40px;
-            height:40px;
-            background-color: var(--mainBlueColor);
-            opacity: 0.2;
-        }   
-    
-        &::before {
-            color: white;
-            font-size: 10px;
-            font-weight: bold;
-            text-align: center;
-            background-color: black ;
-            position: absolute;
-            width:fit-content;
-            padding: 5px;
-            height:18px;
-            top: -42px;
-            opacity: 0;
-            border-radius: 5px;
-        }
-        
+
+
+
+    .home-icon::before {
+        content: "Home";
+        left: -10px;
     }
-    
-}
 
+    .services-icon::before {
+        content: "Services";
+    }
 
+    .reviews-icon::before {
+        content: "Reviews";
+    }
 
-.home-icon::before{
-    content: "Home";
-    left: -10px;
-}
-    
-.services-icon::before{
-    content: "Services";
-}
+    .projects-icon::before {
+        content: "Projects";
+    }
 
-.reviews-icon::before{
-    content: "Reviews";
-}
-    
-.projects-icon::before{
-    content: "Projects";
-}
+    .message-icon::before {
+        content: "Feedback";
+        left: -18px;
+    }
 
-.message-icon::before{
-    content: "Feedback";
-    left: -18px;
-}
-    
-.contact-icon::before{
-    content: "Contact";
-    left: -14px;
-}
+    .contact-icon::before {
+        content: "Contact";
+        left: -14px;
+    }
 
-.services-icon::before,
-.reviews-icon::before,
-.projects-icon::before{
-    left: -15px;
-}
+    .services-icon::before,
+    .reviews-icon::before,
+    .projects-icon::before {
+        left: -15px;
+    }
 
 }
-
-

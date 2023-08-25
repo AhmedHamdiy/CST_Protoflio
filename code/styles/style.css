@@ -226,8 +226,9 @@ main #my-reviews .review-container {
   justify-content: space-between;
 }
 main #my-reviews .recommend {
-  width: 300px;
-  height: 400px;
+  width: 30%;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 30px;
   background-color: var(--section-background);
   padding-left: 20px;
@@ -241,7 +242,7 @@ main #my-reviews .recommend:hover {
   opacity: 100%;
 }
 main #my-reviews .rating {
-  width: 130px;
+  width: 40%;
   height: 17.368px;
   display: flex;
   flex-direction: row;
@@ -250,19 +251,19 @@ main #my-reviews .rating {
   margin-left: 2rem;
 }
 main #my-reviews .review-title {
-  width: 119px;
+  width: 80%;
   height: 22px;
   color: var(--heading-color);
   font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
-  justify-content: left;
-  margin-left: 2rem;
+  text-align: left;
   margin-top: rem;
+  padding-left: 2rem;
   padding-top: 10px;
 }
 main #my-reviews .review-body {
-  width: 262px;
+  width: 85%;
   margin-left: 2rem;
   margin-top: rem;
   color: var(--heading-color);
@@ -277,6 +278,7 @@ main #my-reviews .reviewer-info {
   flex-direction: row;
   padding-top: 20px;
   padding-left: 20px;
+  padding-bottom: 20px;
 }
 main #my-reviews .reviewer-details {
   display: flex;
@@ -509,25 +511,25 @@ footer .loc-contact-container .contact-item, footer .loc-contact-container .loca
 
 aside {
   position: sticky;
-  right: -20px;
   top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 305px;
+  width: 20%;
   height: 1009px;
   background-color: var(--section-background);
   flex-shrink: 0;
 }
 aside .asside-image {
   max-width: 305px;
-  max-width: 1009px;
+  max-height: 1009px;
   width: 150px;
   height: 150px;
   border-radius: 150px;
   border: 2px solid var(--mainBlueColor);
   background: lightgray no-repeat;
   margin: 2px;
+  margin-top: 20px;
 }
 aside .personal-name {
   color: var(--heading-color);
@@ -539,7 +541,7 @@ aside .personal-name {
   margin-bottom: 0.5rem;
 }
 aside .job-info {
-  width: 152px;
+  width: 110%;
   height: 31px;
   border-radius: 50px;
   background: rgba(0, 173, 181, 0.3);
@@ -573,7 +575,7 @@ aside .page {
   background-color: var(--mainBlueColor);
 }
 aside .separating-line {
-  width: 220px;
+  width: 100%;
   height: 1.5px;
   background: var(--heading-color);
 }
@@ -587,6 +589,9 @@ aside .asside-title {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
 }
+aside .skills-info {
+  width: 80%;
+}
 aside .skills {
   display: flex;
   flex-direction: column;
@@ -597,6 +602,7 @@ aside .skill-info-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 aside .skill-name-item {
   color: var(--form-background);
@@ -613,7 +619,7 @@ aside .skill-percentage-item {
   text-transform: capitalize;
 }
 aside .skill-bar {
-  width: 220px;
+  width: 100%;
   height: 4px;
   margin-bottom: 1rem;
   border: var(--mainBlueColor) solid;
@@ -696,9 +702,9 @@ aside button:hover path {
   --mainBlueColor: #00ADB5;
   --form-background: rgba(240, 240, 246, 0.8);
   --section-background: #222831;
-  --body-background:#222831f2;
-  --paragraph-color:rgba(238, 238, 238, 0.75);
-  --heading-color:#FFF;
+  --body-background: #222831f2;
+  --paragraph-color: rgba(238, 238, 238, 0.75);
+  --heading-color: #FFF;
 }
 
 body {

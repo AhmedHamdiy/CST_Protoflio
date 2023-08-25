@@ -4,6 +4,7 @@
 @import './aside';
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Inter:wght@200&display=swap');
 
+
 :root,
 .dark-mode {
     --navShadowColor: rgba(47, 122, 249, 0.10);
@@ -11,13 +12,14 @@
 
     --form-background: rgba(240, 240, 246, 0.8);
     --section-background: #222831;
-    --body-background:#222831f2;
-    --paragraph-color:rgba(238, 238, 238, 0.75);
-    --heading-color:#FFF;
+    --body-background: #222831f2;
+    --paragraph-color: rgba(238, 238, 238, 0.75);
+    --heading-color: #FFF;
 }
+
 body {
     padding: 0;
-    top:0;
+    top: 0;
     margin: 0;
     font-family: 'Cairo', sans-serif;
     text-align: center;
@@ -50,3 +52,9 @@ ul {
     --heading-color:#000;
 }
 */
+
+
+
+//@media (max-width: $mediaMaxWidth) {}
+
+//@media (max-width: $mediaMaxWidth)and (min-width: $mediaMinWidth) {}
