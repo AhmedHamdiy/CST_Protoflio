@@ -641,10 +641,10 @@ aside .css {
   background-color: var(--mainBlueColor);
   width: 80%;
 }
-aside .python {
+aside .Problem-solving {
   height: inherit;
   background-color: var(--mainBlueColor);
-  width: 75%;
+  width: 85%;
 }
 aside .js {
   height: inherit;
