@@ -1,32 +1,34 @@
-nav{
-    position: sticky;
-    right: -20px;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 7.5%;
-    height: 770px;
-    background-color: var(--section-background);
-    box-shadow: 4px 0px 10px 0px var(--navShadowColor);
-
-
-.icons-list{
+@mixin flexColumn() {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+@mixin hover{
+    cursor: pointer;
+    scale: 1.2;    
+}
+nav{
+    position: sticky;
+    right: -20px;
+    top: 0;
+    @include flexColumn;
+    width: 7.5%;
+    height: 850px;
+    background-color: var(--section-background);
+    box-shadow: 4px 0px 10px 0px var(--navShadowColor);
+
+.icons-list{
+    @include flexColumn;
     row-gap: 70px;
 
     .dark-light-logo{
-        margin-top: 65px;
-        margin-bottom: 20px;
+        margin: 65px 0 20px 0;
         path{
             fill: var(--heading-color);
         }
         &:hover{
-            cursor: pointer;
-            scale: 1.2;
+            @include hover;
         }
     }
     .navbar-icon
@@ -36,8 +38,7 @@ nav{
             fill: var(--heading-color);
         }
         &:hover{
-            cursor: pointer;
-            scale: 1.2;
+            @include hover;
             path{
                 fill: var(--mainBlueColor);
             }
@@ -59,8 +60,7 @@ nav{
             height:40px;
             background-color: var(--mainBlueColor);
             opacity: 0.2;
-        }   
-    
+        }       
         &::before {
             color: white;
             font-size: 10px;
@@ -74,47 +74,36 @@ nav{
             top: -42px;
             opacity: 0;
             border-radius: 5px;
-        }
-        
+        }   
     }
-    
 }
 
-
-
+//icons text:
 .home-icon::before{
     content: "Home";
     left: -10px;
-}
-    
+}    
 .services-icon::before{
     content: "Services";
 }
-
 .reviews-icon::before{
     content: "Reviews";
-}
-    
+}   
 .projects-icon::before{
     content: "Projects";
 }
-
 .message-icon::before{
     content: "Feedback";
     left: -18px;
-}
-    
+}   
 .contact-icon::before{
     content: "Contact";
     left: -14px;
 }
-
 .services-icon::before,
 .reviews-icon::before,
 .projects-icon::before{
     left: -15px;
 }
-
 }
-
 

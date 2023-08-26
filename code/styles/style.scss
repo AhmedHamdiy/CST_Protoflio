@@ -4,17 +4,25 @@
 @import './aside';
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Inter:wght@200&display=swap');
 
-:root,
-.dark-mode {
+:root,.dark-mode{
     --navShadowColor: rgba(47, 122, 249, 0.10);
     --mainBlueColor: #00ADB5;
-
     --form-background: rgba(240, 240, 246, 0.8);
     --section-background: #222831;
     --body-background:#222831f2;
     --paragraph-color:rgba(238, 238, 238, 0.75);
     --heading-color:#FFF;
 }
+
+.light-mode {
+    --form-background: #F0F0F6;
+    --navIconColor: #FFF;
+    --section-background: #FFF;
+    --body-background:#F0F0F6;
+    --paragraph-color:#767676;
+    --heading-color:#000;
+}
+
 body {
     padding: 0;
     top:0;
@@ -37,16 +45,3 @@ ul {
     margin: 0;
 }
 
-/*
-:root {
-    --navShadowColor: rgba(47, 122, 249, 0.10);
-    --mainBlueColor: #00ADB5;
-
-    --form-background: #F0F0F6;
-    --navIconColor: #FFF;
-    --section-background: #FFF;
-    --body-background:#F0F0F6;
-    --paragraph-color:#767676;
-    --heading-color:#000;
-}
-*/

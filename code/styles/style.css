@@ -5,9 +5,10 @@ nav {
   top: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 7.5%;
-  height: 770px;
+  height: 850px;
   background-color: var(--section-background);
   box-shadow: 4px 0px 10px 0px var(--navShadowColor);
 }
@@ -19,8 +20,7 @@ nav .icons-list {
   row-gap: 70px;
 }
 nav .icons-list .dark-light-logo {
-  margin-top: 65px;
-  margin-bottom: 20px;
+  margin: 65px 0 20px 0;
 }
 nav .icons-list .dark-light-logo path {
   fill: var(--heading-color);
@@ -108,7 +108,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  row-gap: 100px;
+  row-gap: 50px;
   color: var(--heading-color);
 }
 main section {
@@ -172,7 +172,7 @@ main #home .home-image svg {
   width: 100%;
   position: absolute;
   right: 0px;
-  bottom: -11px;
+  bottom: -10px;
   opacity: 70%;
 }
 main #my-services .services-container {
@@ -180,7 +180,8 @@ main #my-services .services-container {
   width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: start;
 }
 main #my-services .services-container div {
   transition: all 0.5s;
@@ -223,7 +224,8 @@ main #my-reviews .review-container {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: start;
 }
 main #my-reviews .recommend {
   width: 300px;
@@ -271,6 +273,7 @@ main #my-reviews .review-body {
   text-transform: capitalize;
   text-align: left;
   padding-top: 20px;
+  margin: 0 auto;
 }
 main #my-reviews .reviewer-info {
   display: flex;
@@ -318,7 +321,8 @@ main #my-projects .my-projects-paragraph {
 main #my-projects .category-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: start;
   justify-content: space-between;
   margin-left: 25%;
   margin-right: 25%;
@@ -332,11 +336,13 @@ main #my-projects .category-button {
   color: var(--heading-color);
   border: none;
 }
+main #my-projects .category-button:hover {
+  color: var(--mainBlueColor);
+}
 main #my-projects .projects-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   padding-top: 20px;
 }
 main #my-projects .project {
@@ -393,8 +399,18 @@ main p {
   line-height: 24px;
   text-transform: capitalize;
 }
+main footer {
+  text-align: center;
+  width: 100%;
+  background-color: var(--section-background);
+  height: 100px;
+  color: var(--heading-color);
+  line-height: 100px;
+  margin-bottom: 20px;
+  font-size: large;
+}
 
-footer {
+.feedback-container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -402,14 +418,14 @@ footer {
        column-gap: 3%;
   padding-bottom: 2%;
 }
-footer section {
+.feedback-container section {
   background-color: var(--section-background);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-footer #feedback {
+.feedback-container #feedback {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -417,17 +433,17 @@ footer #feedback {
   background-color: var(--section-background);
   padding: 0 20px 20px 20px;
 }
-footer #feedback form {
+.feedback-container #feedback form {
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-footer #feedback form label {
+.feedback-container #feedback form label {
   text-align: left;
   padding: 10px;
 }
-footer #feedback form input {
+.feedback-container #feedback form input {
   width: 90%;
   height: 40px;
   border: none;
@@ -436,11 +452,11 @@ footer #feedback form input {
   padding: 10px;
   margin: 10px;
 }
-footer #feedback form input:focus {
+.feedback-container #feedback form input:focus {
   outline: none;
   caret-color: var(--mainBlueColor);
 }
-footer #feedback form textarea {
+.feedback-container #feedback form textarea {
   width: 90%;
   height: 100px;
   border: none;
@@ -449,11 +465,11 @@ footer #feedback form textarea {
   padding: 10px;
   margin: 10px;
 }
-footer #feedback form textarea:focus {
+.feedback-container #feedback form textarea:focus {
   outline: none;
   caret-color: var(--mainBlueColor);
 }
-footer #feedback form button {
+.feedback-container #feedback form button {
   width: 60%;
   height: 40px;
   border: none;
@@ -463,19 +479,19 @@ footer #feedback form button {
   font-weight: bold;
   margin: 20px 20%;
 }
-footer #feedback form button:hover {
+.feedback-container #feedback form button:hover {
   cursor: pointer;
   background-color: var(--section-background);
   color: var(--mainBlueColor);
 }
-footer .loc-contact-container {
+.feedback-container .loc-contact-container {
   background-color: var(--section-background);
   justify-content: space-between;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
 }
-footer .loc-contact-container #contact-icon, footer .loc-contact-container #location-icon {
+.feedback-container .loc-contact-container #contact-icon, .feedback-container .loc-contact-container #location-icon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -485,19 +501,19 @@ footer .loc-contact-container #contact-icon, footer .loc-contact-container #loca
   width: 90%;
   border-bottom: 1px solid var(--mainBlueColor);
 }
-footer .loc-contact-container #contact-icon path, footer .loc-contact-container #location-icon path {
+.feedback-container .loc-contact-container #contact-icon path, .feedback-container .loc-contact-container #location-icon path {
   fill: var(--heading-color);
 }
-footer .loc-contact-container #contact-icon:hover, footer .loc-contact-container #location-icon:hover {
+.feedback-container .loc-contact-container #contact-icon:hover, .feedback-container .loc-contact-container #location-icon:hover {
   cursor: pointer;
   background-color: var(--mainBlueColor);
   color: var(--section-background);
 }
-footer .loc-contact-container #contact-icon svg, footer .loc-contact-container #location-icon svg {
+.feedback-container .loc-contact-container #contact-icon svg, .feedback-container .loc-contact-container #location-icon svg {
   width: 20px;
   height: 20px;
 }
-footer .loc-contact-container .contact-item, footer .loc-contact-container .location-item {
+.feedback-container .loc-contact-container .contact-item, .feedback-container .loc-contact-container .location-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -522,15 +538,15 @@ aside {
 aside .asside-image {
   max-width: 305px;
   max-width: 1009px;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 150px;
   border: 2px solid var(--mainBlueColor);
   background: lightgray no-repeat;
   margin: 2px;
 }
 aside .personal-name {
-  color: var(--heading-color);
+  color: var(--paragraph-color);
   font-family: Inter;
   font-size: 18px;
   font-weight: 500;
@@ -573,19 +589,21 @@ aside .page {
   background-color: var(--mainBlueColor);
 }
 aside .separating-line {
-  width: 220px;
-  height: 1.5px;
-  background: var(--heading-color);
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  width: 200px;
+  height: 1px;
+  background: var(--mainBlueColor);
 }
 aside .asside-title {
   text-align: left;
-  color: var(--heading-color);
+  color: var(--paragraph-color);
   font-family: Inter;
   font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  margin-top: 0.1rem;
 }
 aside .skills {
   display: flex;
@@ -599,14 +617,14 @@ aside .skill-info-item {
   justify-content: space-between;
 }
 aside .skill-name-item {
-  color: var(--form-background);
+  color: var(--heading-color);
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
   text-transform: capitalize;
 }
 aside .skill-percentage-item {
-  color: var(--form-background);
+  color: var(--heading-color);
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
@@ -615,7 +633,7 @@ aside .skill-percentage-item {
 aside .skill-bar {
   width: 220px;
   height: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
   border: var(--mainBlueColor) solid;
   border-width: 1px;
   border-radius: 10px;
@@ -656,13 +674,13 @@ aside .extra-skill-name {
   margin-left: 2rem;
 }
 aside .extra-skill-item {
-  margin: 2.5px;
+  margin: 1.5px;
   display: flex;
   flex-direction: row;
   justify-content: first baseline;
 }
 aside .cv-download {
-  margin-top: auto;
+  margin-top: 0.1rem;
   margin-bottom: auto;
 }
 aside li {
@@ -690,8 +708,7 @@ aside button:hover path {
   fill: var(--mainBlueColor);
 }
 
-:root,
-.dark-mode {
+:root, .dark-mode {
   --navShadowColor: rgba(47, 122, 249, 0.10);
   --mainBlueColor: #00ADB5;
   --form-background: rgba(240, 240, 246, 0.8);
@@ -699,6 +716,15 @@ aside button:hover path {
   --body-background:#222831f2;
   --paragraph-color:rgba(238, 238, 238, 0.75);
   --heading-color:#FFF;
+}
+
+.light-mode {
+  --form-background: #F0F0F6;
+  --navIconColor: #FFF;
+  --section-background: #FFF;
+  --body-background:#F0F0F6;
+  --paragraph-color:#767676;
+  --heading-color:#000;
 }
 
 body {
@@ -721,18 +747,4 @@ ul {
   list-style: none;
   padding: 10px;
   margin: 0;
-}
-
-/*
-:root {
-    --navShadowColor: rgba(47, 122, 249, 0.10);
-    --mainBlueColor: #00ADB5;
-
-    --form-background: #F0F0F6;
-    --navIconColor: #FFF;
-    --section-background: #FFF;
-    --body-background:#F0F0F6;
-    --paragraph-color:#767676;
-    --heading-color:#000;
-}
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
