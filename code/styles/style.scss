@@ -4,13 +4,8 @@
 @import './aside';
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Inter:wght@200&display=swap');
 
-<<<<<<< HEAD
-
 :root,
 .dark-mode {
-=======
-:root,.dark-mode{
->>>>>>> main
     --navShadowColor: rgba(47, 122, 249, 0.10);
     --mainBlueColor: #00ADB5;
     --form-background: rgba(240, 240, 246, 0.8);
@@ -20,18 +15,15 @@
     --heading-color: #FFF;
 }
 
-<<<<<<< HEAD
-=======
 .light-mode {
     --form-background: #F0F0F6;
     --navIconColor: #FFF;
     --section-background: #FFF;
-    --body-background:#F0F0F6;
-    --paragraph-color:#767676;
-    --heading-color:#000;
+    --body-background: #F0F0F6;
+    --paragraph-color: #767676;
+    --heading-color: #000;
 }
 
->>>>>>> main
 body {
     padding: 0;
     top: 0;
@@ -53,26 +45,3 @@ ul {
     padding: 10px;
     margin: 0;
 }
-
-<<<<<<< HEAD
-/*
-:root {
-    --navShadowColor: rgba(47, 122, 249, 0.10);
-    --mainBlueColor: #00ADB5;
-
-    --form-background: #F0F0F6;
-    --navIconColor: #FFF;
-    --section-background: #FFF;
-    --body-background:#F0F0F6;
-    --paragraph-color:#767676;
-    --heading-color:#000;
-}
-*/
-
-
-
-//@media (max-width: $mediaMaxWidth) {}
-
-//@media (max-width: $mediaMaxWidth)and (min-width: $mediaMinWidth) {}
-=======
->>>>>>> main
