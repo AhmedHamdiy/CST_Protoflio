@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nav {
     position: sticky;
     right: -20px;
@@ -21,14 +22,48 @@ nav {
         .dark-light-logo {
             margin-top: 65px;
             margin-bottom: 20px;
+=======
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+nav {
+    position: sticky;
+    right: -10%;
+    top: 0;
+    @include flexColumn;
+    width: 7.5%;
+    height: 850px;
+    background-color: var(--section-background);
+    box-shadow: 4px 0px 10px 0px var(--navShadowColor);
+
+    .icons-list {
+        @include flexColumn;
+        row-gap: 70px;
+
+        .dark-light-logo {
+            margin: 65px 0 20px 0;
+>>>>>>> main
 
             path {
                 fill: var(--heading-color);
             }
 
             &:hover {
+<<<<<<< HEAD
                 cursor: pointer;
                 scale: 1.2;
+=======
+                @include hover;
+>>>>>>> main
             }
         }
 
@@ -40,8 +75,12 @@ nav {
             }
 
             &:hover {
+<<<<<<< HEAD
                 cursor: pointer;
                 scale: 1.2;
+=======
+                @include hover;
+>>>>>>> main
 
                 path {
                     fill: var(--mainBlueColor);
@@ -83,15 +122,22 @@ nav {
                 opacity: 0;
                 border-radius: 5px;
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
         }
 
         // @media (max-width: 960px) {}
 
     }
 
+<<<<<<< HEAD
 
 
+=======
+    //icons text:
+>>>>>>> main
     .home-icon::before {
         content: "Home";
         left: -10px;
@@ -113,6 +159,7 @@ nav {
         content: "Feedback";
         left: -18px;
     }
+<<<<<<< HEAD
 
     .contact-icon::before {
         content: "Contact";
@@ -125,4 +172,17 @@ nav {
         left: -15px;
     }
 
+=======
+
+    .contact-icon::before {
+        content: "Contact";
+        left: -14px;
+    }
+
+    .services-icon::before,
+    .reviews-icon::before,
+    .projects-icon::before {
+        left: -15px;
+    }
+>>>>>>> main
 }
