@@ -4,13 +4,15 @@
     justify-content: space-between;
     align-items: center;
 }
-@mixin hover{
+
+@mixin hover {
     cursor: pointer;
-    scale: 1.2;    
+    scale: 1.2;
 }
-nav{
+
+nav {
     position: sticky;
-    right: -20px;
+    right: -10%;
     top: 0;
     @include flexColumn;
     width: 7.5%;
@@ -18,92 +20,106 @@ nav{
     background-color: var(--section-background);
     box-shadow: 4px 0px 10px 0px var(--navShadowColor);
 
-.icons-list{
-    @include flexColumn;
-    row-gap: 70px;
+    .icons-list {
+        @include flexColumn;
+        row-gap: 70px;
 
-    .dark-light-logo{
-        margin: 65px 0 20px 0;
-        path{
-            fill: var(--heading-color);
+        .dark-light-logo {
+            margin: 65px 0 20px 0;
+
+            path {
+                fill: var(--heading-color);
+            }
+
+            &:hover {
+                @include hover;
+            }
         }
-        &:hover{
-            @include hover;
+
+        .navbar-icon {
+            position: relative;
+
+            path {
+                fill: var(--heading-color);
+            }
+
+            &:hover {
+                @include hover;
+
+                path {
+                    fill: var(--mainBlueColor);
+                }
+
+                &::before {
+                    opacity: 100%;
+                }
+
+                &::after {
+                    background-color: var(--heading-color);
+                }
+            }
+
+            &::after {
+                position: absolute;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -60%);
+                content: "";
+                width: 40px;
+                height: 40px;
+                background-color: var(--mainBlueColor);
+                opacity: 0.2;
+            }
+
+            &::before {
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                text-align: center;
+                background-color: black;
+                position: absolute;
+                width: fit-content;
+                padding: 5px;
+                height: 18px;
+                top: -42px;
+                opacity: 0;
+                border-radius: 5px;
+            }
         }
     }
-    .navbar-icon
-    {
-        position: relative;
-        path{
-            fill: var(--heading-color);
-        }
-        &:hover{
-            @include hover;
-            path{
-                fill: var(--mainBlueColor);
-            }
-            &::before{
-                opacity: 100%;
-            }
-            &::after{
-                background-color: var(--heading-color);
-            }
-        }
-        &::after{
-            position: absolute;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -60%);
-            content: "";
-            width:40px;
-            height:40px;
-            background-color: var(--mainBlueColor);
-            opacity: 0.2;
-        }       
-        &::before {
-            color: white;
-            font-size: 10px;
-            font-weight: bold;
-            text-align: center;
-            background-color: black ;
-            position: absolute;
-            width:fit-content;
-            padding: 5px;
-            height:18px;
-            top: -42px;
-            opacity: 0;
-            border-radius: 5px;
-        }   
+
+    //icons text:
+    .home-icon::before {
+        content: "Home";
+        left: -10px;
+    }
+
+    .services-icon::before {
+        content: "Services";
+    }
+
+    .reviews-icon::before {
+        content: "Reviews";
+    }
+
+    .projects-icon::before {
+        content: "Projects";
+    }
+
+    .message-icon::before {
+        content: "Feedback";
+        left: -18px;
+    }
+
+    .contact-icon::before {
+        content: "Contact";
+        left: -14px;
+    }
+
+    .services-icon::before,
+    .reviews-icon::before,
+    .projects-icon::before {
+        left: -15px;
     }
 }
-
-//icons text:
-.home-icon::before{
-    content: "Home";
-    left: -10px;
-}    
-.services-icon::before{
-    content: "Services";
-}
-.reviews-icon::before{
-    content: "Reviews";
-}   
-.projects-icon::before{
-    content: "Projects";
-}
-.message-icon::before{
-    content: "Feedback";
-    left: -18px;
-}   
-.contact-icon::before{
-    content: "Contact";
-    left: -14px;
-}
-.services-icon::before,
-.reviews-icon::before,
-.projects-icon::before{
-    left: -15px;
-}
-}
-

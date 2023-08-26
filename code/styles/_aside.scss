@@ -26,15 +26,15 @@ $asside-height: 1009px;
 
 aside {
     position: sticky;
-    right: -20px;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: $asside-width;
+    width: 20%;
     height: $asside-height;
     background-color: var(--section-background);
     flex-shrink: 0;
+
     .asside-image {
         max-width: $asside-width;
         max-width: $asside-height;
