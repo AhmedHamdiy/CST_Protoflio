@@ -1,34 +1,38 @@
-nav {
-    position: sticky;
-    right: -20px;
-    top: 0;
+@mixin flexColumn() {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+}
+
+@mixin hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+nav {
+    position: sticky;
+    right: -10%;
+    top: 0;
+    @include flexColumn;
     width: 7.5%;
-    height: 770px;
+    height: 850px;
     background-color: var(--section-background);
     box-shadow: 4px 0px 10px 0px var(--navShadowColor);
 
-
     .icons-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include flexColumn;
         row-gap: 70px;
 
         .dark-light-logo {
-            margin-top: 65px;
-            margin-bottom: 20px;
+            margin: 65px 0 20px 0;
 
             path {
                 fill: var(--heading-color);
             }
 
             &:hover {
-                cursor: pointer;
-                scale: 1.2;
+                @include hover;
             }
         }
 
@@ -40,8 +44,7 @@ nav {
             }
 
             &:hover {
-                cursor: pointer;
-                scale: 1.2;
+                @include hover;
 
                 path {
                     fill: var(--mainBlueColor);
@@ -83,15 +86,11 @@ nav {
                 opacity: 0;
                 border-radius: 5px;
             }
-
         }
-
-        // @media (max-width: 960px) {}
 
     }
 
-
-
+    //icons text:
     .home-icon::before {
         content: "Home";
         left: -10px;
@@ -124,5 +123,4 @@ nav {
     .projects-icon::before {
         left: -15px;
     }
-
 }

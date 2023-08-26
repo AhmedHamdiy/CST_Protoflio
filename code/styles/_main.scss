@@ -1,7 +1,8 @@
 @mixin flexRow {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: start;
 }
 
 @mixin flexColoumn {
@@ -17,12 +18,12 @@
 }
 
 main {
-    width: 68%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    row-gap: 100px;
+    row-gap: 50px;
     color: var(--heading-color);
 
     section {
@@ -90,8 +91,8 @@ main {
                 z-index: 0;
                 width: 100%;
                 position: absolute;
-                right: -0px;
-                bottom: -11px;
+                right: 0px;
+                bottom: -10px;
                 opacity: 70%;
             }
 
@@ -203,7 +204,7 @@ main {
             @include textStyle(15px);
             text-align: left;
             padding-top: 20px;
-
+            margin: 0 auto;
         }
 
 
@@ -256,7 +257,6 @@ main {
             justify-content: space-between;
             margin-left: 25%;
             margin-right: 25%;
-
         }
 
         .category-button {
@@ -264,11 +264,15 @@ main {
             @include textStyle(18px);
             color: var(--heading-color);
             border: none;
+            &:hover{
+                color: var(--mainBlueColor);
+            }
         }
 
         .projects-container {
-            @include flexRow();
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             padding-top: 20px;
         }
 
@@ -336,5 +340,15 @@ main {
         font-weight: 400;
         line-height: 24px;
         text-transform: capitalize;
+    }
+    footer{
+        text-align: center;
+        width: 100%;
+        background-color: var(--section-background);
+        height: 100px;
+        color: var(--heading-color);
+        line-height: 100px;
+        margin-bottom: 20px;
+        font-size: large;
     }
 }

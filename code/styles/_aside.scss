@@ -2,7 +2,7 @@ $asside-width: 305px;
 $asside-height: 1009px;
 
 @mixin skillItem {
-    color: var(--form-background);
+    color: var(--heading-color);
     font-family: Inter;
     font-size: 15px;
     font-weight: 400;
@@ -10,7 +10,7 @@ $asside-height: 1009px;
 }
 
 @mixin textStyles {
-    color: var(--heading-color);
+    color: var(--paragraph-color);
     font-family: Inter;
     font-size: 18px;
     font-weight: 500;
@@ -104,8 +104,8 @@ aside {
     .asside-title {
         text-align: left;
         @include textStyles();
-        margin-bottom: 0.5rem;
-        margin-top: 0.5rem;
+        margin-bottom: 0.1rem;
+        margin-top: 0.1rem;
 
     }
 
@@ -137,7 +137,7 @@ aside {
     .skill-bar {
         width: 100%;
         height: 4px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.1rem;
         border: var(--mainBlueColor) solid;
         border-width: 1px;
         border-radius: 10px;
@@ -183,14 +183,14 @@ aside {
     }
 
     .extra-skill-item {
-        margin: 2.5px;
+        margin: 1.5px;
         display: flex;
         flex-direction: row;
         justify-content: first baseline;
     }
 
     .cv-download {
-        margin-top: auto;
+        margin-top: 0.1rem;
         margin-bottom: auto;
     }
 
