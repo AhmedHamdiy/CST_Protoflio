@@ -477,7 +477,8 @@ footer .loc-contact-container {
   flex-direction: column;
   row-gap: 40px;
 }
-footer .loc-contact-container #contact-icon, footer .loc-contact-container #location-icon {
+footer .loc-contact-container #contact-icon,
+footer .loc-contact-container #location-icon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -487,19 +488,23 @@ footer .loc-contact-container #contact-icon, footer .loc-contact-container #loca
   width: 90%;
   border-bottom: 1px solid var(--mainBlueColor);
 }
-footer .loc-contact-container #contact-icon path, footer .loc-contact-container #location-icon path {
+footer .loc-contact-container #contact-icon path,
+footer .loc-contact-container #location-icon path {
   fill: var(--heading-color);
 }
-footer .loc-contact-container #contact-icon:hover, footer .loc-contact-container #location-icon:hover {
+footer .loc-contact-container #contact-icon:hover,
+footer .loc-contact-container #location-icon:hover {
   cursor: pointer;
   background-color: var(--mainBlueColor);
   color: var(--section-background);
 }
-footer .loc-contact-container #contact-icon svg, footer .loc-contact-container #location-icon svg {
+footer .loc-contact-container #contact-icon svg,
+footer .loc-contact-container #location-icon svg {
   width: 20px;
   height: 20px;
 }
-footer .loc-contact-container .contact-item, footer .loc-contact-container .location-item {
+footer .loc-contact-container .contact-item,
+footer .loc-contact-container .location-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
