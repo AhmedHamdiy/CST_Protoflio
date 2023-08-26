@@ -354,6 +354,13 @@ main #my-projects .project {
   margin-left: 25px;
   margin-top: 25px;
   border-radius: 30px;
+  cursor: pointer;
+  opacity: 90%;
+  transition: 0.5s;
+}
+main #my-projects .project:hover {
+  opacity: 100%;
+  scale: 1.1;
 }
 main #my-projects .process-scheduler {
   background-image: url(../../images/process.png);
@@ -447,12 +454,14 @@ main footer {
 }
 .feedback-container #feedback form input {
   width: 90%;
-  height: 40px;
+  height: 25px;
   border: none;
   background-color: var(--form-background);
-  color: white;
+  color: rgba(34, 40, 49, 0.9490196078);
   padding: 10px;
   margin: 10px;
+  font-size: medium;
+  font-weight: 100;
 }
 .feedback-container #feedback form input:focus {
   outline: none;
@@ -466,6 +475,9 @@ main footer {
   color: white;
   padding: 10px;
   margin: 10px;
+  font-size: large;
+  font-weight: 100;
+  color: rgba(34, 40, 49, 0.9490196078);
 }
 .feedback-container #feedback form textarea:focus {
   outline: none;
@@ -523,11 +535,16 @@ main footer {
 .feedback-container .loc-contact-container .location-item {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
   margin: 20px;
-  -moz-column-gap: 100px;
-       column-gap: 100px;
   row-gap: 30px;
+}
+.feedback-container .loc-contact-container .location-item {
+  justify-content: space-between;
+}
+.feedback-container .loc-contact-container .contact-item {
+  -moz-column-gap: 50px;
+       column-gap: 50px;
 }
 
 aside {
@@ -556,10 +573,11 @@ aside .personal-name {
   color: var(--paragraph-color);
   font-family: Inter;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: capitalize;
   margin: 0rem;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 aside .job-info {
   width: 110%;
@@ -605,7 +623,7 @@ aside .asside-title {
   color: var(--paragraph-color);
   font-family: Inter;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: capitalize;
   margin-bottom: 0.1rem;
   margin-top: 0.1rem;
@@ -647,30 +665,30 @@ aside .skill-bar {
   border-width: 1px;
   border-radius: 10px;
 }
-aside .Cpp {
-  height: inherit;
-  background-color: var(--mainBlueColor);
-  width: 90%;
-}
-aside .html {
-  height: inherit;
-  background-color: var(--mainBlueColor);
-  width: 85%;
-}
-aside .css {
-  height: inherit;
-  background-color: var(--mainBlueColor);
-  width: 80%;
-}
 aside .Problem-solving {
   height: inherit;
   background-color: var(--mainBlueColor);
   width: 85%;
 }
-aside .js {
+aside .data-structure {
   height: inherit;
   background-color: var(--mainBlueColor);
   width: 85%;
+}
+aside .algorithms {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 80%;
+}
+aside .oop {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 75%;
+}
+aside .frontend {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 75%;
 }
 aside .extra-skills {
   display: flex;
@@ -683,10 +701,25 @@ aside .extra-skill-name {
   margin-left: 2rem;
 }
 aside .extra-skill-item {
-  margin: 1.5px;
   display: flex;
   flex-direction: row;
   justify-content: first baseline;
+  margin: 1.5px;
+}
+aside .Languages {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  justify-content: space-evenly;
+  justify-content: first baseline;
+}
+aside .language-item {
+  display: flex;
+  flex-direction: row;
+}
+aside .language-name {
+  margin: 0;
+  margin-left: 2rem;
 }
 aside .cv-download {
   margin-top: 0.1rem;

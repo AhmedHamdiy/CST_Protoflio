@@ -264,7 +264,8 @@ main {
             @include textStyle(18px);
             color: var(--heading-color);
             border: none;
-            &:hover{
+
+            &:hover {
                 color: var(--mainBlueColor);
             }
         }
@@ -283,6 +284,14 @@ main {
             margin-left: 25px;
             margin-top: 25px;
             border-radius: 30px;
+            cursor: pointer;
+            opacity: 90%;
+            transition: 0.5s;
+
+            &:hover {
+                opacity: 100%;
+                scale: 1.1;
+            }
         }
 
         .process-scheduler {
@@ -341,7 +350,8 @@ main {
         line-height: 24px;
         text-transform: capitalize;
     }
-    footer{
+
+    footer {
         text-align: center;
         width: 100%;
         background-color: var(--section-background);

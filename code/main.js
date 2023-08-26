@@ -101,3 +101,38 @@ hardwareButton.addEventListener("click", function () {
 allButton.addEventListener("click", function () {
   addAllProjects();
 });
+
+//linking projects to git hub repos
+
+const todoApp = document.querySelector(".todo-app");
+const ticTacToe = document.querySelector(".tic-tac-toe");
+const alu = document.querySelector(".alu");
+const paintForKids = document.querySelector(".paint-for-kids");
+const processScheduler = document.querySelector(".process-scheduler");
+const spi = document.querySelector(".spi");
+
+todoApp.addEventListener("click", function () {
+  window.open(
+    "https://github.com/AbdelruhmanSamy/CST-Training/tree/main/TodoList",
+    "_blank"
+  );
+});
+ticTacToe.addEventListener("click", function () {
+  alert(
+    "Currently, no github repo for this project, we're working on adding it"
+  );
+});
+alu.addEventListener("click", function () {
+  alert(
+    "Currently, no github repo for this project, we're working on adding it"
+  );
+});
+paintForKids.addEventListener("click", function () {
+  window.open("https://github.com/AbdelruhmanSamy/Paint-for-kids", "_blank");
+});
+processScheduler.addEventListener("click", function () {
+  window.open("https://github.com/jpassica/ProcessScheduler", "_blank");
+});
+spi.addEventListener("click", function () {
+  window.open("https://github.com/AhmedHamed3699/AES-Encryption", "_blank");
+});

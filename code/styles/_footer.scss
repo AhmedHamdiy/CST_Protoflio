@@ -37,17 +37,18 @@
 
             input {
                 width: 90%;
-                height: 40px;
+                height: 25px;
                 border: none;
                 background-color: var(--form-background);
-                color: white;
+                color: #222831f2;
                 padding: 10px;
                 margin: 10px;
+                font-size: medium;
+                font-weight: 100;
 
                 &:focus {
                     outline: none;
                     caret-color: var(--mainBlueColor);
-
                 }
             }
 
@@ -59,6 +60,9 @@
                 color: white;
                 padding: 10px;
                 margin: 10px;
+                font-size: large;
+                font-weight: 100;
+                color: #222831f2;
 
                 &:focus {
                     outline: none;
@@ -124,10 +128,17 @@
         .location-item {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: left;
             margin: 20px;
-            column-gap: 100px;
             row-gap: 30px;
+        }
+
+        .location-item {
+            justify-content: space-between;
+        }
+
+        .contact-item {
+            column-gap: 50px;
         }
     }
 }

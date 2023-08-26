@@ -13,7 +13,7 @@ $asside-height: 1009px;
     color: var(--paragraph-color);
     font-family: Inter;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: capitalize;
 }
 
@@ -22,6 +22,11 @@ $asside-height: 1009px;
     flex-direction: column;
     justify-self: left;
     justify-content: space-evenly;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
 }
 
 aside {
@@ -52,6 +57,8 @@ aside {
         @include textStyles();
         margin: 0rem;
         margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+
     }
 
     .job-info {
@@ -143,35 +150,36 @@ aside {
         border-radius: 10px;
     }
 
-    .Cpp {
-        height: inherit;
-        background-color: var(--mainBlueColor);
-        width: 90%;
-    }
-
-    .html {
-        height: inherit;
-        background-color: var(--mainBlueColor);
-        width: 85%;
-    }
-
-    .css {
-        height: inherit;
-        background-color: var(--mainBlueColor);
-        width: 80%;
-    }
-
     .Problem-solving {
         height: inherit;
         background-color: var(--mainBlueColor);
         width: 85%;
     }
 
-    .js {
+    .data-structure {
         height: inherit;
         background-color: var(--mainBlueColor);
         width: 85%;
     }
+
+    .algorithms {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 80%;
+    }
+
+    .oop {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 75%;
+    }
+
+    .frontend {
+        height: inherit;
+        background-color: var(--mainBlueColor);
+        width: 75%;
+    }
+
 
     .extra-skills {
         @include flexColoumn();
@@ -183,10 +191,24 @@ aside {
     }
 
     .extra-skill-item {
-        margin: 1.5px;
-        display: flex;
-        flex-direction: row;
+        @include flexRow();
         justify-content: first baseline;
+        margin: 1.5px;
+    }
+
+
+    .Languages {
+        @include flexColoumn();
+        justify-content: first baseline;
+    }
+
+    .language-item {
+        @include flexRow();
+    }
+
+    .language-name {
+        margin: 0;
+        margin-left: 2rem;
     }
 
     .cv-download {
