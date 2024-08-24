@@ -37,24 +37,24 @@ modeToggle.addEventListener("click", function () {
 //Categorizing projects:
 const allButton = document.querySelector(".all-button");
 const softwareButton = document.querySelector(".software-button");
-const hardwareButton = document.querySelector(".hardware-button");
+const WebDevelopmentButton = document.querySelector(".Web-development-button");
 const softwareProjects = document.querySelectorAll(".software");
-const hardwareProjects = document.querySelectorAll(".hardware");
+const WebDevelopmentProjects = document.querySelectorAll(".Web-development");
 
 function addAllProjects() {
   allButton.style.color = "#00ADB5";
   if (currentMode.classList.contains("dark-mode")) {
     softwareButton.style.color = "#000";
-    hardwareButton.style.color = "#000";
+    WebDevelopmentButton.style.color = "#000";
   } else {
     softwareButton.style.color = "#fff";
-    hardwareButton.style.color = "#fff";
+    WebDevelopmentButton.style.color = "#fff";
   }
   softwareProjects.forEach((element) => {
     if (element.classList.contains("hide")) element.classList.remove("hide");
   });
 
-  hardwareProjects.forEach((element) => {
+  WebDevelopmentProjects.forEach((element) => {
     if (element.classList.contains("hide")) element.classList.remove("hide");
   });
 }
@@ -62,21 +62,21 @@ function handleSoftwareButton() {
   softwareButton.style.color = "#00ADB5";
   if (currentMode.classList.contains("dark-mode")) {
     allButton.style.color = "#000";
-    hardwareButton.style.color = "#000";
+    WebDevelopmentButton.style.color = "#000";
   } else {
     allButton.style.color = "#fff";
-    hardwareButton.style.color = "#fff";
+    WebDevelopmentButton.style.color = "#fff";
   }
-  softwareProjects.forEach((element) => {
+  WebDevelopmentProjects.forEach((element) => {
     if (!element.classList.contains("hide")) element.classList.add("hide");
   });
 
-  hardwareProjects.forEach((element) => {
+  softwareProjects.forEach((element) => {
     if (element.classList.contains("hide")) element.classList.remove("hide");
   });
 }
-function handleHardwareButton() {
-  hardwareButton.style.color = "#00ADB5";
+function handleWebDevelopmentButton() {
+  WebDevelopmentButton.style.color = "#00ADB5";
   if (currentMode.classList.contains("dark-mode")) {
     allButton.style.color = "#000";
     softwareButton.style.color = "#000";
@@ -84,19 +84,19 @@ function handleHardwareButton() {
     allButton.style.color = "#fff";
     softwareButton.style.color = "#fff";
   }
-  hardwareProjects.forEach((element) => {
+  softwareProjects.forEach((element) => {
     if (!element.classList.contains("hide")) element.classList.add("hide");
   });
 
-  softwareProjects.forEach((element) => {
+  WebDevelopmentProjects.forEach((element) => {
     if (element.classList.contains("hide")) element.classList.remove("hide");
   });
 }
 softwareButton.addEventListener("click", function () {
   handleSoftwareButton();
 });
-hardwareButton.addEventListener("click", function () {
-  handleHardwareButton();
+WebDevelopmentButton.addEventListener("click", function () {
+  handleWebDevelopmentButton();
 });
 allButton.addEventListener("click", function () {
   addAllProjects();
@@ -104,35 +104,33 @@ allButton.addEventListener("click", function () {
 
 //linking projects to git hub repos
 
-const todoApp = document.querySelector(".todo-app");
-const ticTacToe = document.querySelector(".tic-tac-toe");
-const alu = document.querySelector(".alu");
-const paintForKids = document.querySelector(".paint-for-kids");
-const processScheduler = document.querySelector(".process-scheduler");
-const spi = document.querySelector(".spi");
+const owler = document.querySelector(".owler");
+const ubuntastic = document.querySelector(".ubuntastic");
+const sanay3y = document.querySelector(".sanay3y");
+const racing = document.querySelector(".paint-for-kids");
+const schedulerly = document.querySelector(".schedulerly");
+const qlogger = document.querySelector(".qlogger");
 
-todoApp.addEventListener("click", function () {
-  window.open(
-    "https://github.com/AbdelruhmanSamy/CST-Training/tree/main/TodoList",
-    "_blank"
-  );
+owler.addEventListener("click", function () {
+  window.open("https://github.com/AhmedHamdiy/Olwer", "_blank");
 });
-ticTacToe.addEventListener("click", function () {
-  alert(
-    "Currently, no github repo for this project, we're working on adding it"
-  );
+
+ubuntastic.addEventListener("click", function () {
+  window.open("https://github.com/AhmedHamdiy/Ubuntastic", "_blank");
 });
-alu.addEventListener("click", function () {
-  alert(
-    "Currently, no github repo for this project, we're working on adding it"
-  );
+
+sanay3y.addEventListener("click", function () {
+  window.open("https://github.com/AhmedHamdiy/Sanay3yOnTheGo", "_blank");
 });
-paintForKids.addEventListener("click", function () {
-  window.open("https://github.com/AbdelruhmanSamy/Paint-for-kids", "_blank");
+
+racing.addEventListener("click", function () {
+  window.open("https://github.com/AhmedHamdiy/Sabek-Lahek", "_blank");
 });
-processScheduler.addEventListener("click", function () {
-  window.open("https://github.com/jpassica/ProcessScheduler", "_blank");
+
+schedulerly.addEventListener("click", function () {
+  window.open("https://github.com/AhmedHamdiy/Schedulerly", "_blank");
 });
-spi.addEventListener("click", function () {
-  window.open("https://github.com/AhmedHamed3699/AES-Encryption", "_blank");
+
+qlogger.addEventListener("click", function () {
+  window.open("https://github.com/AhmedHamdiy/Qlogger", "_blank");
 });

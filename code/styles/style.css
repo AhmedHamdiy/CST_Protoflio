@@ -103,7 +103,7 @@ nav .projects-icon::before {
 }
 
 main {
-  width: 70%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -362,23 +362,23 @@ main #my-projects .project:hover {
   opacity: 100%;
   scale: 1.1;
 }
-main #my-projects .process-scheduler {
+main #my-projects .schedulerly {
   background-image: url(../../images/process.png);
 }
-main #my-projects .paint-for-kids {
-  background-image: url(../../images/paint.png);
+main #my-projects .racing {
+  background-image: url(../../images/racing.png);
 }
-main #my-projects .tic-tac-toe {
-  background-image: url(../../images/tic.png);
+main #my-projects .owler {
+  background-image: url(../../images/Owl.png);
 }
-main #my-projects .todo-app {
-  background-image: url(../../images/to-do.png);
+main #my-projects .ubuntastic {
+  background-image: url(../../images/Ubuntastic.png);
 }
-main #my-projects .alu {
-  background-image: url(../../images/alu.png);
+main #my-projects .qlogger {
+  background-image: url(../../images/qlogger.png);
 }
-main #my-projects .spi {
-  background-image: url(../../images/spi.png);
+main #my-projects .sanay3y {
+  background-image: url(../../images/sanay3y.png);
 }
 main #my-projects .hide {
   display: none;
@@ -424,7 +424,7 @@ main footer {
   display: flex;
   flex-direction: row;
   -moz-column-gap: 3%;
-       column-gap: 3%;
+  column-gap: 3%;
   padding-bottom: 2%;
 }
 .feedback-container section {
@@ -544,7 +544,7 @@ main footer {
 }
 .feedback-container .loc-contact-container .contact-item {
   -moz-column-gap: 50px;
-       column-gap: 50px;
+  column-gap: 50px;
 }
 
 aside {
@@ -665,46 +665,20 @@ aside .skill-bar {
   border-width: 1px;
   border-radius: 10px;
 }
-aside .Problem-solving {
+aside .skill-bar-90 {
+  height: inherit;
+  background-color: var(--mainBlueColor);
+  width: 90%;
+}
+aside .skill-bar-85 {
   height: inherit;
   background-color: var(--mainBlueColor);
   width: 85%;
 }
-aside .data-structure {
-  height: inherit;
-  background-color: var(--mainBlueColor);
-  width: 85%;
-}
-aside .algorithms {
+aside .skill-bar-80 {
   height: inherit;
   background-color: var(--mainBlueColor);
   width: 80%;
-}
-aside .oop {
-  height: inherit;
-  background-color: var(--mainBlueColor);
-  width: 75%;
-}
-aside .frontend {
-  height: inherit;
-  background-color: var(--mainBlueColor);
-  width: 75%;
-}
-aside .extra-skills {
-  display: flex;
-  flex-direction: column;
-  justify-self: left;
-  justify-content: space-evenly;
-}
-aside .extra-skill-name {
-  margin: 0;
-  margin-left: 2rem;
-}
-aside .extra-skill-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: first baseline;
-  margin: 1.5px;
 }
 aside .Languages {
   display: flex;
@@ -721,9 +695,10 @@ aside .language-name {
   margin: 0;
   margin-left: 2rem;
 }
-aside .cv-download {
+aside .resume-download {
   margin-top: 0.1rem;
-  margin-bottom: auto;
+  width: 90%;
+  margin: 0px;
 }
 aside li {
   color: var(--paragraph-color);
@@ -752,20 +727,20 @@ aside button:hover path {
 
 :root,
 .dark-mode {
-  --navShadowColor: rgba(47, 122, 249, 0.10);
-  --mainBlueColor: #00ADB5;
+  --navShadowColor: rgba(47, 122, 249, 0.1);
+  --mainBlueColor: #00adb5;
   --form-background: rgba(240, 240, 246, 0.8);
   --section-background: #222831;
   --body-background: #222831f2;
   --paragraph-color: rgba(238, 238, 238, 0.75);
-  --heading-color: #FFF;
+  --heading-color: #fff;
 }
 
 .light-mode {
-  --form-background: #F0F0F6;
-  --navIconColor: #FFF;
-  --section-background: #FFF;
-  --body-background: #F0F0F6;
+  --form-background: #f0f0f6;
+  --navIconColor: #fff;
+  --section-background: #fff;
+  --body-background: #f0f0f6;
   --paragraph-color: #767676;
   --heading-color: #000;
 }
@@ -790,4 +765,4 @@ ul {
   list-style: none;
   padding: 10px;
   margin: 0;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
