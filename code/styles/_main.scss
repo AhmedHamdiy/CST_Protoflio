@@ -1,364 +1,357 @@
 @mixin flexRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
 }
 
 @mixin flexColoumn {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-@mixin textStyle ($size) {
-    color: var(--heading-color);
-    font-size: $size;
-    font-weight: 500;
-    text-transform: capitalize;
+@mixin textStyle($size) {
+  color: var(--heading-color);
+  font-size: $size;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 main {
-    width: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 50px;
+  color: var(--heading-color);
+
+  section {
+    width: 100%;
+    text-align: center;
+  }
+
+  #home {
+    height: 20%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    row-gap: 50px;
-    color: var(--heading-color);
+    flex-direction: row;
+    width: 100%;
+    position: relative;
 
-    section {
-        width: 100%;
-        text-align: center;
-    }
+    &:hover,
+    img:hover,
+    svg:hover,
+    .home-text:hover {
+      .text {
+        translate: 40%;
+      }
 
-    #home {
-        height: 20%;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        position: relative;
+      img {
+        translate: -130%;
+      }
 
-        &:hover,
-        img:hover,
-        svg:hover,
-        .home-text:hover {
-            .text {
-                translate: 40%;
-            }
-
-            img {
-                translate: -130%;
-            }
-
-            svg {
-                transform: scaleX(-1);
-            }
-        }
-
-        p {
-            padding-left: 30px;
-            width: 48%;
-        }
-
-        .home-text {
-            height: 50vh;
-            background-color: var(--section-background);
-            width: 100%;
-
-            #soft-ware-word {
-                color: var(--mainBlueColor);
-            }
-        }
-
-        .home-image {
-            margin-top: 20px;
-
-            img {
-                width: 45%;
-                height: 100%;
-                position: absolute;
-                right: 0px;
-                bottom: 0px;
-                z-index: 2;
-                transition: all 0.5s;
-
-                &:hover {
-                    translate: (-100%);
-                }
-            }
-
-            svg {
-                z-index: 0;
-                width: 100%;
-                position: absolute;
-                right: 0px;
-                bottom: -10px;
-                opacity: 70%;
-            }
-
-        }
-
-    }
-
-    #my-services {
-        .services-container {
-            padding-left: 10%;
-            width: 80%;
-            @include flexRow();
-
-            div {
-                transition: all 0.5s;
-                display: flex;
-                flex-direction: column;
-                row-gap: 20px;
-                align-items: center;
-                background-color: var(--section-background);
-                padding-top: 20px;
-                width: 30%;
-                height: 200px;
-                border-radius: 20px;
-                opacity: 80%;
-
-
-                svg {
-                    width: 100%;
-
-                    path {
-                        fill: var(--mainBlueColor);
-                    }
-                }
-
-                img {
-                    width: 70px;
-                    height: 70px;
-                    flex-shrink: 0;
-                }
-
-                span {
-                    color: var(--paragraph-color);
-                    width: 100%;
-                    padding-left: 0;
-                }
-
-                &:hover {
-                    scale: 1.1;
-                    opacity: 100%;
-                }
-            }
-        }
-    }
-
-    #my-reviews {
-        @include flexColoumn();
-
-        .my-reviews-paragraph {}
-
-        .review-container {
-            width: 100%;
-            @include flexRow();
-        }
-
-        .recommend {
-            width: 30%;
-            height: fit-content;
-            border-radius: 30px;
-            background-color: var(--section-background);
-            padding-left: 20px;
-            @include flexColoumn();
-            opacity: 80%;
-            transition: all 0.5s;
-
-            &:hover {
-                scale: 1.1;
-                opacity: 100%;
-            }
-
-        }
-
-        .rating {
-            width: 40%;
-            height: 17.368px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-top: 20px;
-            margin-left: 2rem;
-
-        }
-
-        .review-title {
-            width: 80%;
-            height: 22px;
-            @include textStyle(18px);
-            text-align: left;
-            margin-top: rem;
-            padding-left: 2rem;
-            padding-top: 10px;
-
-        }
-
-        .review-body {
-            width: 85%;
-            margin-left: 2rem;
-            margin-top: rem;
-            @include textStyle(15px);
-            text-align: left;
-            padding-top: 20px;
-            margin: 0 auto;
-        }
-
-
-        .reviewer-info {
-            display: flex;
-            flex-direction: row;
-            padding-top: 20px;
-            padding-left: 20px;
-            padding-bottom: 20px;
-        }
-
-        .reviewer-details {
-            @include flexColoumn();
-            padding-left: 10px;
-            margin: 0;
-            padding-top: 0;
-        }
-
-        .reviewer-photo {
-            width: 80px;
-            height: 80px;
-            border-radius: 80px;
-            background: lightgray no-repeat;
-        }
-
-        .reviewer-name {
-            @include textStyle(18px);
-            padding-left: 5px;
-            margin: 0;
-        }
-
-        .reviewer-job {
-            @include textStyle(15px);
-            color: #EEEEEEBF;
-        }
-
-    }
-
-    #my-projects {
-        @include flexColoumn();
-        margin-left: auto;
-        margin-right: auto;
-
-        .my-projects-paragraph {
-            padding-top: 20px;
-        }
-
-        .category-container {
-            @include flexRow();
-            justify-content: space-between;
-            margin-left: 25%;
-            margin-right: 25%;
-        }
-
-        .category-button {
-            background-color: transparent;
-            @include textStyle(18px);
-            color: var(--heading-color);
-            border: none;
-
-            &:hover {
-                color: var(--mainBlueColor);
-            }
-        }
-
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            padding-top: 20px;
-        }
-
-        .project {
-            width: 310px;
-            height: 300px;
-            background-color: aliceblue;
-            margin-left: 25px;
-            margin-top: 25px;
-            border-radius: 30px;
-            cursor: pointer;
-            opacity: 90%;
-            transition: 0.5s;
-
-            &:hover {
-                opacity: 100%;
-                scale: 1.1;
-            }
-        }
-
-        .process-scheduler {
-            background-image: url(../../images/process.png);
-        }
-
-        .paint-for-kids {
-            background-image: url(../../images/paint.png);
-        }
-
-        .tic-tac-toe {
-            background-image: url(../../images/tic.png);
-        }
-
-        .todo-app {
-            background-image: url(../../images/to-do.png);
-        }
-
-        .alu {
-            background-image: url(../../images/alu.png);
-        }
-
-        .spi {
-            background-image: url(../../images/spi.png);
-        }
-
-        .hide {
-            display: none;
-        }
-    }
-
-    h1 {
-        width: 52%;
-        color: var(--heading-color);
-        font-size: 48px;
-        font-weight: bolder;
-        line-height: 60%;
-        padding-left: 30px;
-    }
-
-    h2 {
-        color: var(--heading-color);
-        font-size: 36px;
+      svg {
+        transform: scaleX(-1);
+      }
     }
 
     p {
-        padding-left: 29%;
-        width: 42%;
-        height: 88px;
-        flex-shrink: 0;
-        color: var(--paragraph-color);
-        font-feature-settings: 'calt' off;
-        font-family: cairo;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        text-transform: capitalize;
+      padding-left: 30px;
+      width: 48%;
     }
 
-    footer {
-        text-align: center;
-        width: 100%;
-        background-color: var(--section-background);
-        height: 100px;
-        color: var(--heading-color);
-        line-height: 100px;
-        margin-bottom: 20px;
-        font-size: large;
+    .home-text {
+      height: 50vh;
+      background-color: var(--section-background);
+      width: 100%;
+
+      #soft-ware-word {
+        color: var(--mainBlueColor);
+      }
     }
+
+    .home-image {
+      margin-top: 20px;
+
+      img {
+        width: 45%;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 2;
+        transition: all 0.5s;
+
+        &:hover {
+          translate: (-100%);
+        }
+      }
+
+      svg {
+        z-index: 0;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        bottom: -10px;
+        opacity: 70%;
+      }
+    }
+  }
+
+  #my-services {
+    .services-container {
+      padding-left: 10%;
+      width: 80%;
+      @include flexRow();
+
+      div {
+        transition: all 0.5s;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+        background-color: var(--section-background);
+        padding-top: 20px;
+        width: 30%;
+        height: 200px;
+        border-radius: 20px;
+        opacity: 80%;
+
+        svg {
+          width: 100%;
+
+          path {
+            fill: var(--mainBlueColor);
+          }
+        }
+
+        img {
+          width: 70px;
+          height: 70px;
+          flex-shrink: 0;
+        }
+
+        span {
+          color: var(--paragraph-color);
+          width: 100%;
+          padding-left: 0;
+        }
+
+        &:hover {
+          scale: 1.1;
+          opacity: 100%;
+        }
+      }
+    }
+  }
+
+  #my-reviews {
+    @include flexColoumn();
+
+    .my-reviews-paragraph {
+    }
+
+    .review-container {
+      width: 100%;
+      @include flexRow();
+    }
+
+    .recommend {
+      width: 30%;
+      height: fit-content;
+      border-radius: 30px;
+      background-color: var(--section-background);
+      padding-left: 20px;
+      @include flexColoumn();
+      opacity: 80%;
+      transition: all 0.5s;
+
+      &:hover {
+        scale: 1.1;
+        opacity: 100%;
+      }
+    }
+
+    .rating {
+      width: 40%;
+      height: 17.368px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 20px;
+      margin-left: 2rem;
+    }
+
+    .review-title {
+      width: 80%;
+      height: 22px;
+      @include textStyle(18px);
+      text-align: left;
+      margin-top: rem;
+      padding-left: 2rem;
+      padding-top: 10px;
+    }
+
+    .review-body {
+      width: 85%;
+      margin-left: 2rem;
+      margin-top: rem;
+      @include textStyle(15px);
+      text-align: left;
+      padding-top: 20px;
+      margin: 0 auto;
+    }
+
+    .reviewer-info {
+      display: flex;
+      flex-direction: row;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+
+    .reviewer-details {
+      @include flexColoumn();
+      padding-left: 10px;
+      margin: 0;
+      padding-top: 0;
+    }
+
+    .reviewer-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      background: lightgray no-repeat;
+    }
+
+    .reviewer-name {
+      @include textStyle(18px);
+      padding-left: 5px;
+      margin: 0;
+    }
+
+    .reviewer-job {
+      @include textStyle(15px);
+      color: #eeeeeebf;
+    }
+  }
+
+  #my-projects {
+    @include flexColoumn();
+    margin-left: auto;
+    margin-right: auto;
+
+    .my-projects-paragraph {
+      padding-top: 20px;
+    }
+
+    .category-container {
+      @include flexRow();
+      justify-content: space-between;
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+
+    .category-button {
+      background-color: transparent;
+      @include textStyle(18px);
+      color: var(--heading-color);
+      border: none;
+
+      &:hover {
+        color: var(--mainBlueColor);
+      }
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding-top: 20px;
+    }
+
+    .project {
+      width: 310px;
+      height: 300px;
+      background-color: aliceblue;
+      margin-left: 25px;
+      margin-top: 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      opacity: 90%;
+      transition: 0.5s;
+
+      &:hover {
+        opacity: 100%;
+        scale: 1.1;
+      }
+    }
+
+    .schedulerly {
+      background-image: url(../../images/process.png);
+    }
+
+    .racing {
+      background-image: url(../../images/racing.png);
+    }
+
+    .owler {
+      background-image: url(../../images/owler.png);
+    }
+
+    .ubuntastic {
+      background-image: url(../../images/Ubuntastic.png);
+    }
+
+    .qlogger {
+      background-image: url(../../images/qlogger.png);
+    }
+
+    .sanay3y {
+      background-image: url(../../images/sanay3y.png);
+    }
+
+    .hide {
+      display: none;
+    }
+  }
+
+  h1 {
+    width: 52%;
+    color: var(--heading-color);
+    font-size: 48px;
+    font-weight: bolder;
+    line-height: 60%;
+    padding-left: 30px;
+  }
+
+  h2 {
+    color: var(--heading-color);
+    font-size: 36px;
+  }
+
+  p {
+    padding-left: 29%;
+    width: 42%;
+    height: 88px;
+    flex-shrink: 0;
+    color: var(--paragraph-color);
+    font-feature-settings: "calt" off;
+    font-family: cairo;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+  }
+
+  footer {
+    text-align: center;
+    width: 100%;
+    background-color: var(--section-background);
+    height: 100px;
+    color: var(--heading-color);
+    line-height: 100px;
+    margin-bottom: 20px;
+    font-size: large;
+  }
 }
