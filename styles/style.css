@@ -363,22 +363,22 @@ main #my-projects .project:hover {
   scale: 1.1;
 }
 main #my-projects .schedulerly {
-  background-image: url(../../images/process.png);
+  background-image: url(../images/process.png);
 }
 main #my-projects .racing {
-  background-image: url(../../images/racing.png);
+  background-image: url(../images/racing.png);
 }
 main #my-projects .owler {
-  background-image: url(../../images/Owl.png);
+  background-image: url(../images/Owl.png);
 }
 main #my-projects .ubuntastic {
-  background-image: url(../../images/Ubuntastic.png);
+  background-image: url(../images/Ubuntastic.png);
 }
 main #my-projects .qlogger {
-  background-image: url(../../images/qlogger.png);
+  background-image: url(../images/qlogger.png);
 }
 main #my-projects .sanay3y {
-  background-image: url(../../images/sanay3y.png);
+  background-image: url(../images/sanay3y.png);
 }
 main #my-projects .hide {
   display: none;
